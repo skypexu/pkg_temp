@@ -1,0 +1,34 @@
+Running main() from gtest_main.cc
+[==========] Running 3 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from RwlockTest
+[ RUN      ] RwlockTest.sanity
+[       OK ] RwlockTest.sanity (0 ms)
+[ RUN      ] RwlockTest.mix_thread_types
+[       OK ] RwlockTest.mix_thread_types (1002 ms)
+[----------] 2 tests from RwlockTest (1002 ms total)
+
+[----------] 1 test from RWLockTest
+[ RUN      ] RWLockTest.performance
+PROFILE: interrupts/evictions/bytes = 125/5/1240
+I0728 19:18:31.202413 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t readlock  in pthread thread_num=12 count=2356899 average_time=2676.74
+PROFILE: interrupts/evictions/bytes = 126/1/840
+I0728 19:18:31.774006 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t readlock  in bthread thread_num=12 count=2614719 average_time=2614.25
+PROFILE: interrupts/evictions/bytes = 49/11/1504
+I0728 19:18:32.311585 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t readlock  in pthread thread_num=1 count=12213133 average_time=43.9175
+PROFILE: interrupts/evictions/bytes = 49/12/1344
+I0728 19:18:32.868119 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t readlock  in bthread thread_num=1 count=12675140 average_time=43.8095
+PROFILE: interrupts/evictions/bytes = 126/46/5184
+I0728 19:18:33.377935 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t writelock  in pthread thread_num=12 count=942467 average_time=6458.69
+PROFILE: interrupts/evictions/bytes = 125/13/4192
+I0728 19:18:33.913411 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t writelock  in bthread thread_num=12 count=899525 average_time=7114.31
+PROFILE: interrupts/evictions/bytes = 49/19/2056
+I0728 19:18:34.453308 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t writelock  in pthread thread_num=1 count=6620200 average_time=81.3755
+PROFILE: interrupts/evictions/bytes = 49/13/1408
+I0728 19:18:35.321230 1321782 /home/yfxu/github/curve_repos/incubator-brpc/test/bthread_brpc_rwlock_unittest.cpp:122] bthread_rwlock_t writelock  in bthread thread_num=1 count=10657998 average_time=81.323
+[       OK ] RWLockTest.performance (4647 ms)
+[----------] 1 test from RWLockTest (4647 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test cases ran. (5721 ms total)
+[  PASSED  ] 3 tests.
